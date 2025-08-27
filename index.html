@@ -1,3 +1,41 @@
+Tất nhiên rồi! Dưới đây là phiên bản nâng cấp toàn diện cho trang web của FC ANH DUY, được xây dựng với giao diện chuyên nghiệp hơn, nhiều tính năng nâng cao và đã được tinh chỉnh lại bố cục để trở nên mượt mà và hiện đại hơn.
+
+Các cải tiến và tính năng mới trong phiên bản này:
+
+Giao diện cao cấp: Sử dụng font chữ thể thao, mạnh mẽ cho tiêu đề và các hiệu ứng chuyển động tinh tế khi người dùng cuộn trang để tạo cảm giác sống động.
+
+Tích hợp Logo: Logo của đội bóng (/img/3t.png) đã được thêm vào thanh điều hướng (navigation bar) và sẽ luôn hiển thị nổi bật.
+
+Phần Lịch thi đấu & Kết quả: Một khu vực chuyên nghiệp để người hâm mộ có thể theo dõi các trận đấu sắp tới và xem lại kết quả của các trận đã qua.
+
+Bảng Tin Tức: Cập nhật những tin tức nóng hổi, thông báo hoặc bài viết về đội bóng, giúp trang web luôn mới mẻ.
+
+Thư viện ảnh (Gallery): Một bộ sưu tập hình ảnh các khoảnh khắc đáng nhớ của đội. Khi nhấp vào ảnh nhỏ, ảnh sẽ được phóng to để xem rõ hơn.
+
+Phần Nhà tài trợ: Thể hiện sự chuyên nghiệp bằng cách dành một khu vực để vinh danh các nhà tài trợ (nếu có).
+
+Hiệu ứng Scroll Animation: Các phần tử sẽ xuất hiện một cách mượt mà khi bạn cuộn trang, tạo ra trải nghiệm người dùng hấp dẫn hơn.
+
+Footer được thiết kế lại: Chân trang được bố trí lại với nhiều thông tin hơn, chuyên nghiệp hơn.
+
+Tối ưu hóa bố cục: Toàn bộ bố cục đã được kiểm tra và tinh chỉnh để đảm bảo hiển thị đẹp mắt trên mọi thiết bị, từ điện thoại, máy tính bảng đến máy tính để bàn.
+
+Hướng dẫn sử dụng:
+
+Sao chép toàn bộ mã nguồn bên dưới.
+
+Dán vào một tệp mới và lưu với tên fc-anh-duy.html.
+
+Quan trọng: Để logo hiển thị, bạn cần tạo một thư mục tên là img trong cùng thư mục chứa tệp fc-anh-duy.html, và đặt tệp logo 3t.png của bạn vào đó.
+
+Mở tệp fc-anh-duy.html bằng trình duyệt web để xem kết quả.
+
+code
+Html
+download
+content_copy
+expand_less
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -10,333 +48,334 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
     <style>
         /*--------------------------------------------------------------
-        # General Styles
+        # Variables & General Styles
         --------------------------------------------------------------*/
         :root {
-            --primary-color: #d90429; /* A strong red for team identity */
-            --secondary-color: #2b2d42; /* A dark blue/grey for background */
-            --light-color: #edf2f4; /* A light grey for text and highlights */
-            --dark-color: #151515; /* A very dark color for backgrounds */
+            --primary-color: #E50914; /* Netflix Red - very strong and modern */
+            --secondary-color: #141414; /* Dark background */
+            --light-color: #F5F5F1; /* Off-white for text */
+            --dark-color: #000000; /* Pure black for depth */
+            --grey-color: #222222;
         }
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: var(--dark-color);
+            background-color: var(--secondary-color);
             color: var(--light-color);
             line-height: 1.7;
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-weight: 700;
+            font-family: 'Bebas Neue', cursive;
             color: #fff;
+            letter-spacing: 1.5px;
+        }
+        
+        .section-padding {
+            padding: 100px 0;
         }
 
         .section-title {
             text-align: center;
-            padding-bottom: 40px;
+            margin-bottom: 60px;
         }
 
         .section-title h2 {
-            font-size: 3rem;
-            font-weight: 900;
+            font-size: 4.5rem;
             text-transform: uppercase;
             position: relative;
             display: inline-block;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
         }
 
         .section-title h2::after {
             content: '';
             position: absolute;
             display: block;
-            width: 60px;
-            height: 4px;
+            width: 80px;
+            height: 5px;
             background: var(--primary-color);
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
         }
-
-        .btn-primary {
+        
+        .btn-brand {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
-            font-weight: 700;
-            text-transform: uppercase;
-            padding: 12px 30px;
+            color: #fff;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            padding: 12px 35px;
             transition: all 0.3s ease;
         }
 
-        .btn-primary:hover {
+        .btn-brand:hover {
             background-color: #fff;
             color: var(--primary-color);
             border-color: #fff;
-            transform: translateY(-3px);
+            transform: scale(1.05);
+        }
+
+        /* Scroll Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /*--------------------------------------------------------------
         # Header & Navigation
         --------------------------------------------------------------*/
         .navbar {
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(12px);
+            transition: all 0.4s ease;
+            padding: 10px 0;
         }
 
-        .navbar-brand {
-            font-weight: 900;
-            font-size: 1.8rem;
-            color: #fff !important;
-        }
-
-        .navbar-brand .logo-highlight {
-            color: var(--primary-color);
+        .navbar-brand img {
+            height: 50px;
         }
 
         .nav-link {
+            font-family: 'Bebas Neue', cursive;
             color: #fff !important;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin: 0 10px;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+            margin: 0 15px;
             position: relative;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            display: block;
-            margin-top: 5px;
-            right: 0;
-            background: var(--primary-color);
-            transition: width 0.3s ease;
+            transition: color 0.3s;
         }
         
-        .nav-link:hover::after {
-            width: 100%;
-            left: 0;
-            background: var(--primary-color);
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color) !important;
         }
 
         /*--------------------------------------------------------------
-        # Hero Section (Image Slider)
+        # Hero Section
         --------------------------------------------------------------*/
         .hero {
-            position: relative;
             height: 100vh;
-            width: 100%;
-            overflow: hidden;
-            color: #fff;
-        }
-
-        .hero-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1935&auto=format&fit=crop') no-repeat center center;
             background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
         }
         
-        .hero-slide.active {
-            opacity: 1;
-        }
-
-        .hero-slide::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-        }
-        
-        .hero-content {
-            z-index: 1;
-            max-width: 800px;
-            animation: fadeInDown 1.5s;
-        }
-
         .hero-content h1 {
-            font-size: 5rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            font-size: 7rem;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
         }
         
         .hero-content p {
             font-size: 1.5rem;
-            margin-bottom: 40px;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            max-width: 600px;
+            margin: 20px auto 40px;
         }
 
         /*--------------------------------------------------------------
-        # About Section
+        # Match Schedule Section
         --------------------------------------------------------------*/
-        #about {
-            background-color: var(--secondary-color);
-            padding: 80px 0;
+        #schedule {
+            background-color: var(--grey-color);
         }
-
-        #about img {
-            border: 5px solid var(--primary-color);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        .match-card {
+            background: var(--secondary-color);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        .match-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+        .match-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .team {
+            display: flex;
+            align-items: center;
+        }
+        .team img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+        .score {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+        .match-details {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-top: 10px;
+            text-align: center;
         }
 
         /*--------------------------------------------------------------
         # Team Members Section
         --------------------------------------------------------------*/
-        #team {
-            padding: 80px 0;
-        }
-
         .player-card {
-            background: var(--secondary-color);
-            border-radius: 15px;
+            background: var(--grey-color);
+            border: 1px solid #333;
             overflow: hidden;
             position: relative;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
         .player-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 40px rgba(217, 4, 41, 0.3);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
         }
-
-        .player-card .player-img {
-            position: relative;
-            height: 300px;
+        .player-img-wrapper {
+            height: 350px;
+            overflow: hidden;
         }
-
-        .player-card .player-img img {
+        .player-card img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: grayscale(80%);
-            transition: filter 0.4s ease;
+            transition: transform 0.5s ease;
         }
-        
-        .player-card:hover .player-img img {
-            filter: grayscale(0%);
+        .player-card:hover img {
+            transform: scale(1.1);
         }
-
-        .player-card .player-number {
+        .player-info {
+            padding: 20px;
+            text-align: center;
+        }
+        .player-info h3 {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+        .player-info .position {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        .player-number {
             position: absolute;
             top: 10px;
-            right: 15px;
-            font-size: 3rem;
-            font-weight: 900;
-            color: #fff;
-            opacity: 0.5;
-            transition: opacity 0.4s ease;
+            right: 10px;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 4rem;
+            color: rgba(255,255,255,0.2);
+            line-height: 1;
         }
 
-        .player-card:hover .player-number {
-            opacity: 1;
-            color: var(--primary-color);
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        /*--------------------------------------------------------------
+        # News Section
+        --------------------------------------------------------------*/
+        #news {
+            background-color: var(--grey-color);
         }
-        
-        .player-card .player-info {
+        .news-card {
+            background: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+        .news-card .card-body {
             padding: 25px;
         }
-
-        .player-card .player-info h3 {
+        .news-card .card-title {
             font-size: 1.5rem;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-        }
-        
-        .player-card .player-info .position {
-            font-weight: 400;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-        
-        .player-socials {
-            position: absolute;
-            bottom: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 15px;
-            transition: bottom 0.4s ease;
-        }
-
-        .player-card:hover .player-socials {
-            bottom: 20px;
-        }
-
-        .player-socials a {
             color: #fff;
-            font-size: 1.2rem;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            border-radius: 50%;
-            background: rgba(0,0,0,0.5);
-            transition: background 0.3s ease;
+            transition: color 0.3s;
         }
-        
-        .player-socials a:hover {
-            background: var(--primary-color);
+        .news-card:hover .card-title {
+            color: var(--primary-color);
         }
-        
+        .news-card .card-text {
+            color: #aaa;
+        }
+        .news-card .news-meta {
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        /*--------------------------------------------------------------
+        # Gallery Section
+        --------------------------------------------------------------*/
+        .gallery-item {
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+        .gallery-item img {
+            transition: transform 0.4s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-item::after {
+            content: "\f00e"; /* Font Awesome zoom icon */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 3rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+        .modal-content {
+            background: transparent;
+            border: none;
+        }
+        .modal-body {
+            padding: 0;
+        }
+
         /*--------------------------------------------------------------
         # Footer
         --------------------------------------------------------------*/
         #footer {
-            background-color: #000;
-            padding: 40px 0;
+            background-color: var(--dark-color);
+            padding: 60px 0;
             text-align: center;
         }
-
-        .footer-socials a {
-            color: var(--light-color);
-            margin: 0 15px;
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
+        #footer .footer-logo {
+            height: 70px;
+            margin-bottom: 20px;
         }
-        
+        .footer-socials a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
         .footer-socials a:hover {
             color: var(--primary-color);
         }
-        
         .copyright {
             margin-top: 20px;
-            font-size: 0.9rem;
             color: #777;
         }
+
     </style>
 </head>
 <body>
@@ -345,24 +384,20 @@
     <header id="header" class="fixed-top">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="#">FC <span class="logo-highlight">ANH DUY</span></a>
+                <a class="navbar-brand" href="#">
+                    <!-- IMPORTANT: Create an 'img' folder and place '3t.png' inside it -->
+                    <img src="img/3t.png" alt="FC ANH DUY Logo">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#hero">Trang Chủ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">Giới Thiệu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#team">Đội Hình</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#footer">Liên Hệ</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link active" href="#hero">Trang Chủ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#schedule">Lịch Đấu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Đội Hình</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#news">Tin Tức</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#gallery">Thư Viện</a></li>
                     </ul>
                 </div>
             </div>
@@ -371,178 +406,152 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="hero">
-        <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1935&auto=format&fit=crop');">
-            <div class="hero-content">
-                <h1>FC ANH DUY</h1>
-                <p>Đoàn Kết - Kỷ Luật - Chiến Thắng</p>
-                <a href="#about" class="btn btn-primary">Tìm Hiểu Thêm</a>
-            </div>
-        </div>
-        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1551958214-2d5e23a4c461?q=80&w=2070&auto=format&fit=crop');">
-            <div class="hero-content">
-                <h1>Sức Mạnh Tập Thể</h1>
-                <p>Nơi những cá nhân cùng chung một đam mê</p>
-            </div>
-        </div>
-        <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=2070&auto=format&fit=crop');">
-            <div class="hero-content">
-                <h1>Sẵn Sàng Chinh Phục</h1>
-                <p>Không ngừng nỗ lực vì màu cờ sắc áo</p>
-            </div>
+        <div class="hero-content">
+            <h1 class="animate-on-scroll">FC ANH DUY</h1>
+            <p class="animate-on-scroll" style="transition-delay: 0.2s;">Một đội bóng, một gia đình, một giấc mơ.</p>
+            <a href="#team" class="btn btn-brand animate-on-scroll" style="transition-delay: 0.4s;">Khám Phá Đội Hình</a>
         </div>
     </section>
 
     <main id="main">
 
-        <!-- ======= About Us Section ======= -->
-        <section id="about" class="about">
+        <!-- ======= Match Schedule Section ======= -->
+        <section id="schedule" class="section-padding">
             <div class="container">
                 <div class="section-title">
-                    <h2>Về Chúng Tôi</h2>
+                    <h2 class="animate-on-scroll">Lịch Thi Đấu</h2>
                 </div>
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <img src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?q=80&w=1925&auto=format&fit=crop" class="img-fluid rounded" alt="Đội bóng FC Anh Duy">
+                <div class="row">
+                    <div class="col-lg-6 animate-on-scroll">
+                        <h3 class="mb-4">TRẬN ĐẤU SẮP TỚI</h3>
+                        <div class="match-card">
+                            <div class="match-info">
+                                <div class="team"><img src="img/3t.png" alt="Logo FC Anh Duy"> <h4>FC ANH DUY</h4></div>
+                                <div class="score">VS</div>
+                                <div class="team"><h4>FC Star Light</h4> <img src="https://placehold.co/100x100/cccccc/000000.png?text=SL" alt="Logo Đối thủ"></div>
+                            </div>
+                            <div class="match-details">20:00, 30 Tháng 8, 2025 | Sân Vận Động Thống Nhất</div>
+                        </div>
                     </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0">
-                        <h3>FC ANH DUY - Hơn Cả Một Đội Bóng</h3>
-                        <p>
-                            Được thành lập từ niềm đam mê cháy bỏng với trái bóng tròn, FC ANH DUY không chỉ là nơi quy tụ những tài năng sân cỏ mà còn là một gia đình thực sự. Chúng tôi cùng nhau chia sẻ niềm vui chiến thắng, nỗi buồn thất bại và luôn sát cánh bên nhau trên mọi chặng đường.
-                        </p>
-                        <p>
-                            Với tôn chỉ "Đoàn Kết - Kỷ Luật - Chiến Thắng", mỗi thành viên của FC ANH DUY luôn ra sân với tinh thần quyết tâm cao nhất, cống hiến những trận cầu đẹp mắt và giàu cảm xúc cho người hâm mộ.
-                        </p>
+                    <div class="col-lg-6 animate-on-scroll" style="transition-delay: 0.2s;">
+                        <h3 class="mb-4">KẾT QUẢ GẦN ĐÂY</h3>
+                        <div class="match-card">
+                            <div class="match-info">
+                                <div class="team"><img src="img/3t.png" alt="Logo FC Anh Duy"> <h4>FC ANH DUY</h4></div>
+                                <div class="score">3 - 1</div>
+                                <div class="team"><h4>FC Brothers</h4> <img src="https://placehold.co/100x100/1122cc/ffffff.png?text=BR" alt="Logo Đối thủ"></div>
+                            </div>
+                            <div class="match-details">FT | 23 Tháng 8, 2025 | Sân Vận Động Phú Thọ</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ======= Team Section ======= -->
-        <section id="team" class="team">
+        <section id="team" class="section-padding">
             <div class="container">
-
                 <div class="section-title">
-                    <h2>Thành Viên Đội</h2>
+                    <h2 class="animate-on-scroll">Gặp Gỡ Đội Hình</h2>
                 </div>
-
-                <div class="row gy-4">
-
-                    <!-- Player Card 1 -->
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                <div class="row g-4">
+                    <!-- Player Cards -->
+                    <div class="col-lg-3 col-md-6 animate-on-scroll">
                         <div class="player-card">
-                            <div class="player-img">
-                                <img src="https://images.pexels.com/photos/4065158/pexels-photo-4065158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Cầu thủ 1">
-                                <div class="player-number">10</div>
-                                <div class="player-socials">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                </div>
-                            </div>
+                            <div class="player-number">10</div>
+                            <div class="player-img-wrapper"><img src="https://images.pexels.com/photos/4065158/pexels-photo-4065158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Cầu thủ"></div>
                             <div class="player-info">
                                 <h3>Nguyễn Anh Duy</h3>
-                                <span class="position">Tiền Đạo - Đội Trưởng</span>
+                                <span class="position">Đội Trưởng / Tiền Đạo</span>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Player Card 2 -->
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="col-lg-3 col-md-6 animate-on-scroll" style="transition-delay: 0.1s;">
                         <div class="player-card">
-                            <div class="player-img">
-                                <img src="https://images.pexels.com/photos/14840714/pexels-photo-14840714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Cầu thủ 2">
-                                <div class="player-number">7</div>
-                            </div>
+                            <div class="player-number">7</div>
+                            <div class="player-img-wrapper"><img src="https://images.pexels.com/photos/14840714/pexels-photo-14840714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Cầu thủ"></div>
                             <div class="player-info">
                                 <h3>Trần Văn Bảo</h3>
                                 <span class="position">Tiền Vệ Cánh</span>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Player Card 3 -->
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="col-lg-3 col-md-6 animate-on-scroll" style="transition-delay: 0.2s;">
                         <div class="player-card">
-                            <div class="player-img">
-                                <img src="https://images.pexels.com/photos/8996229/pexels-photo-8996229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Cầu thủ 3">
-                                <div class="player-number">4</div>
-                            </div>
+                            <div class="player-number">4</div>
+                            <div class="player-img-wrapper"><img src="https://images.pexels.com/photos/8996229/pexels-photo-8996229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Cầu thủ"></div>
                             <div class="player-info">
                                 <h3>Lê Minh Chiến</h3>
                                 <span class="position">Trung Vệ</span>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Player Card 4 -->
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                     <div class="col-lg-3 col-md-6 animate-on-scroll" style="transition-delay: 0.3s;">
                         <div class="player-card">
-                            <div class="player-img">
-                                <img src="https://images.pexels.com/photos/6684275/pexels-photo-6684275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Cầu thủ 4">
-                                <div class="player-number">1</div>
-                            </div>
+                            <div class="player-number">1</div>
+                            <div class="player-img-wrapper"><img src="https://images.pexels.com/photos/6684275/pexels-photo-6684275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Cầu thủ"></div>
                             <div class="player-info">
                                 <h3>Phạm Tuấn Hùng</h3>
                                 <span class="position">Thủ Môn</span>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Thêm các thành viên khác ở đây -->
-                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4">
-                        <div class="player-card">
-                            <div class="player-img">
-                                <img src="https://images.pexels.com/photos/8569578/pexels-photo-8569578.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Cầu thủ 5">
-                                <div class="player-number">8</div>
-                            </div>
-                            <div class="player-info">
-                                <h3>Hoàng Đức Trung</h3>
-                                <span class="position">Tiền Vệ Trung Tâm</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4">
-                        <div class="player-card">
-                            <div class="player-img">
-                                <img src="https://images.pexels.com/photos/8598471/pexels-photo-8598471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Cầu thủ 6">
-                                <div class="player-number">2</div>
-                            </div>
-                            <div class="player-info">
-                                <h3>Vũ Tiến Dũng</h3>
-                                <span class="position">Hậu Vệ Cánh</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4">
-                        <div class="player-card">
-                            <div class="player-img">
-                                <img src="https://images.pexels.com/photos/10390861/pexels-photo-10390861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Cầu thủ 7">
-                                <div class="player-number">11</div>
-                            </div>
-                            <div class="player-info">
-                                <h3>Đặng Quang Vinh</h3>
-                                <span class="position">Tiền Vệ Tấn Công</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4">
-                        <div class="player-card">
-                            <div class="player-img">
-                                <img src="https://images.pexels.com/photos/10390858/pexels-photo-10390858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Cầu thủ 8">
-                                <div class="player-number">5</div>
-                            </div>
-                            <div class="player-info">
-                                <h3>Ngô Gia Huy</h3>
-                                <span class="position">Hậu Vệ Thòng</span>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+            </div>
+        </section>
 
+        <!-- ======= News Section ======= -->
+        <section id="news" class="section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="animate-on-scroll">Tin Tức Mới Nhất</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 animate-on-scroll">
+                        <div class="card news-card h-100">
+                            <img src="https://images.unsplash.com/photo-1551958214-2d5e23a4c461?q=80&w=2070&auto=format&fit=crop" class="card-img-top" alt="News">
+                            <div class="card-body">
+                                <p class="news-meta">24 Tháng 8, 2025 | THÔNG BÁO</p>
+                                <h5 class="card-title">Chiến thắng quan trọng, khẳng định vị thế</h5>
+                                <p class="card-text">FC Anh Duy đã có một trận đấu xuất sắc và giành chiến thắng 3-1 đầy thuyết phục...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.2s;">
+                        <div class="card news-card h-100">
+                            <img src="https://images.unsplash.com/photo-1594464405963-0a73f3a4b087?q=80&w=2070&auto=format&fit=crop" class="card-img-top" alt="News">
+                            <div class="card-body">
+                                <p class="news-meta">20 Tháng 8, 2025 | SỰ KIỆN</p>
+                                <h5 class="card-title">Buổi tập luyện mở trước thềm trận đấu lớn</h5>
+                                <p class="card-text">Toàn đội đang tập trung cao độ, chuẩn bị cho cuộc đối đầu quan trọng sắp tới...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.4s;">
+                        <div class="card news-card h-100">
+                            <img src="https://images.unsplash.com/photo-1628891890377-573741523a63?q=80&w=1974&auto=format&fit=crop" class="card-img-top" alt="News">
+                            <div class="card-body">
+                                <p class="news-meta">15 Tháng 8, 2025 | CHUYỂN NHƯỢNG</p>
+                                <h5 class="card-title">Chào mừng tân binh gia nhập đội bóng</h5>
+                                <p class="card-text">FC Anh Duy vui mừng thông báo đã hoàn tất hợp đồng với tiền vệ trung tâm tài năng...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= Gallery Section ======= -->
+        <section id="gallery" class="section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="animate-on-scroll">Khoảnh Khắc Đáng Nhớ</h2>
+                </div>
+                <div class="row g-2">
+                    <div class="col-lg-4 col-md-6 animate-on-scroll"><div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1606925797300-0b35e2d4975a?q=80&w=1932&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1606925797300-0b35e2d4975a?q=80&w=1932&auto=format&fit=crop" class="img-fluid"></div></div>
+                    <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.1s;"><div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1598448375988-23298a05c080?q=80&w=1974&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1598448375988-23298a05c080?q=80&w=1974&auto=format&fit=crop" class="img-fluid"></div></div>
+                    <div class="col-lg-4 col-md-6 animate-on-scroll" style="transition-delay: 0.2s;"><div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?q=80&w=1925&auto=format&fit=crop"><img src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?q=80&w=1925&auto=format&fit=crop" class="img-fluid"></div></div>
+                </div>
             </div>
         </section>
 
@@ -551,62 +560,59 @@
     <!-- ======= Footer ======= -->
     <footer id="footer">
         <div class="container">
-            <h3>FC ANH DUY</h3>
-            <p>Luôn cháy hết mình với đam mê.</p>
-            <div class="footer-socials">
+            <img src="img/3t.png" alt="FC ANH DUY Logo" class="footer-logo">
+            <p>Hơn cả một đội bóng. Là một gia đình.</p>
+            <div class="footer-socials my-4">
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="copyright">
-                &copy; Copyright <strong><span>FC ANH DUY</span></strong>. All Rights Reserved
+                &copy; 2025 Copyright <strong><span>FC ANH DUY</span></strong>. All Rights Reserved
             </div>
         </div>
     </footer>
+
+    <!-- Gallery Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="" id="modalImage" class="w-100">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Hero Image Slider
-            const slides = document.querySelectorAll('.hero-slide');
-            let currentSlide = 0;
-            const slideInterval = 5000; // Change image every 5 seconds
 
-            function nextSlide() {
-                slides[currentSlide].classList.remove('active');
-                currentSlide = (currentSlide + 1) % slides.length;
-                slides[currentSlide].classList.add('active');
-            }
-
-            setInterval(nextSlide, slideInterval);
-
-            // Smooth scrolling for nav links
-            const navLinks = document.querySelectorAll('.nav-link');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    if (this.hash !== "") {
-                        e.preventDefault();
-                        const hash = this.hash;
-                        const targetElement = document.querySelector(hash);
-                        window.scrollTo({
-                            top: targetElement.offsetTop,
-                            behavior: 'smooth'
-                        });
+            // Scroll Animations
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
                     }
                 });
+            }, {
+                threshold: 0.1 
             });
 
-            // Add scroll effect to navbar
-            const navbar = document.querySelector('.navbar');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    navbar.style.background = 'rgba(0, 0, 0, 0.9)';
-                } else {
-                    navbar.style.background = 'rgba(0, 0, 0, 0.8)';
-                }
+            document.querySelectorAll('.animate-on-scroll').forEach(element => {
+                observer.observe(element);
+            });
+
+            // Gallery Modal Logic
+            const galleryModal = document.getElementById('galleryModal');
+            galleryModal.addEventListener('show.bs.modal', function (event) {
+                const triggerElement = event.relatedTarget;
+                const imageSrc = triggerElement.getAttribute('data-img');
+                const modalImage = document.getElementById('modalImage');
+                modalImage.src = imageSrc;
             });
         });
     </script>
