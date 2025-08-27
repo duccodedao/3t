@@ -4,13 +4,15 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.23.0/firebas
 import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js';
 
 // Thay thế với cấu hình Firebase của bạn
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyCCr5195KxCtcFBj31zYe9Qc1ZDxEC4Ov4",
+  authDomain: "thanh-ea958.firebaseapp.com",
+  projectId: "thanh-ea958",
+  storageBucket: "thanh-ea958.firebasestorage.app",
+  messagingSenderId: "593756294921",
+  appId: "1:593756294921:web:b7ac2aa773ca05c845cdd8",
+  measurementId: "G-1Q0D96D7LS"
 };
 
 // Khởi tạo Firebase
